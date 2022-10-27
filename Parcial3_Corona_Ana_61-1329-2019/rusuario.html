@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/diseño.css">
+    <script src="https://kit.fontawesome.com/b375149b8e.js" crossorigin="anonymous"></script>
+</head>
+<body onload="listar();">
+    <header>
+        <div class="titulo">
+            <h1>DotOffice</h1>
+        </div>
+       </header>
+
+       <div class="subtitu">
+        <h1>Registro de usuario </h1>
+    </div>
+    <main class="dere">
+       
+    
+        <div container class="main">
+            <form class="row needs-validation tipo formulario" novalidate>
+    
+                <form action="" class="formulario" id="formulario">
+
+                    <div class="sexo position-relative">
+                        <label for="select" class="formulario__lable"><i class="fa fa-building" aria-hidden="true"></i> Categoría:</label>
+                        <select class="form-select formulario__input" id="categoria" required aria-label="Default select example">
+                            <option value="">Selecciona una Categoría</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Corporativo">Corporativo</option>
+                          </select>
+                          <div class="invalid-tooltip">
+                            Debe rellenar este campo.
+                          </div>
+                    </div>
+    
+
+
+    
+                    <div class="formulario__grupo position-relative"  id="grupo__nombre">
+                      <label for="nombre"  class="formulario__lable"><i class="fa fa-user" aria-hidden="true"></i> Nombres</label>
+                      <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" id="name" placeholder="Manuel Alexander" required>
+                        <div class="valid-tooltip">
+                            Todo bien.
+                          </div>
+                          <div class="invalid-tooltip">
+                            Debe rellenar este campo.
+                          </div>
+                      </div>
+                     </div>
+    
+                     <div class="formulario__grupo position-relative"  id="grupo__apellido">
+                        <label for="apellido" class="formulario__lable"><i class="fa fa-user" aria-hidden="true"></i> Apellidos</label>
+                        <div class="formulario__grupo-input">
+                          <input type="text" class="formulario__input" id="lastname" placeholder="Umaña Cortez" required>
+                          <div class="valid-tooltip">
+                              Todo bien.
+                            </div>
+                            <div class="invalid-tooltip">
+                              Debe rellenar este campo.
+                            </div>
+                        </div>
+                       </div>
+    
+                       <div class="formulario__grupo position-relative"  id="grupo__email">
+                        <label for="email" class="formulario__lable"><i class="fa fa-envelope" aria-hidden="true"></i> Email </label>
+                        <div class="formulario__grupo-input">
+                          <input type="email" class="formulario__input" id="email" placeholder="ManuUmaña@gmail.com" required>
+                          <div class="valid-tooltip">
+                              Todo bien.
+                            </div>
+                            <div class="invalid-tooltip">
+                              Debe rellenar este campo.
+                            </div>
+                        </div>
+                       </div> 
+    
+                      
+                  
+                    <div class="formulario__grupo position-relative"  id="grupo__contraseña1">
+                        <label for="contraseña1" class="formulario__lable"><i class="fa fa-lock" aria-hidden="true"></i> Contraseña del ususario</label>
+                        <div class="formulario__grupo-input">
+                          <input type="password" class="formulario__input" id="passwd" placeholder="Manu_alex1993" required>
+                          <div class="valid-tooltip">
+                              Todo bien.
+                            </div>
+                            <div class="invalid-tooltip">
+                              Debe rellenar este campo.
+                            </div>
+                        </div>
+                       </div> <br>
+    
+          
+    
+                       <div class="formulario__grupo position-relative">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="info" required>
+                          <label class="form-check-label" for="info">
+                            Deseo recibir información
+                          </label>
+                          <div class="valid-tooltip">
+                            Todo bien.
+                          </div>
+                          <div class="invalid-tooltip">
+                            Es necesario aceptar los terminos.
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="formulario__grupo position-relative">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="terminos" required>
+                          <label class="form-check-label" for="terminos">
+                            Acepto los términos de servicios
+                          </label>
+                          <div class="valid-tooltip">
+                            Todo bien.
+                          </div>
+                          <div class="invalid-tooltip">
+                            Es necesario aceptar los terminos.
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                      <div class="formulario__grupo formulario__grupo-btn-enviar">
+                        <a href="tabla.html"><button class="btn formulario__btn" onclick="guadar_localStorage();listar();">Registrar</button>
+                        </div></a>
+
+
+
+
+                      
+                
+                        
+
+
+                     <!--<div class="formulario__grupo ">
+                        <a href="tabla.html"><button class="btn formulario__btn" onclick="guadar_localStorage();listar();">Registrar</button>
+                        </div></a>
+
+                        <div class="formulario__grupo  linea1">
+                          <button type="submit" class="formulario__btn">
+                              <ul class="navbar-nav">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="tabla.html">verificar Tabla</a>
+                                  </li>
+                                </ul>
+                          </button>
+                      </div> -->
+    
+                       <!--<div class="formulario__grupo formulario__grupo-btn-enviar">
+                        <a href="tabla.html"><button class="btn btn-primary" onclick="guadar_localStorage();listar();"><i class="fa fa-user-o" aria-hidden="true"></i> Registrar</button>
+                        </div></a>
+                        
+                       <ul class="navbar-nav    formulario__grupo formulario__grupo-btn-enviar">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="tabla.html"><i class="fa fa-home"
+                                  aria-hidden="true"></i> tabla</a>
+                            </li>
+                          </ul>
+
+                          <ul class="navbar-nav    formulario__grupo formulario__grupo-btn-enviar">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="inicio.html"><i class="fa fa-home"
+                                  aria-hidden="true"></i> inicio</a>
+                            </li>
+                          </ul>-->
+
+
+                          
+                          
+
+              
+
+
+                         
+
+
+
+
+
+
+    
+    
+            </form>
+
+
+        </div>
+        
+    </main>
+
+
+
+    <!--de esta manera quiero los botones, pero el de regristrar no valida y no se porque me ayudas plis :,c
+    no logre solusionar el problema pero este el diseño original, los 3 borones en linea-->
+    
+  <!--<form class="needs-validation" novalidate>
+
+    <div class="f">
+
+      <div class="botonesxd">
+  
+        <div class="formulario__grupo  linea1">
+          <button type="submit" class="formulario__btn">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="inicio.html">volver a inicio</a>
+                  </li>
+                </ul>
+          </button>
+      </div>
+        <div class="formulario__grupo ">
+          <a href="tabla.html"><button class="btn formulario__btn" onclick="guadar_localStorage();listar();">Registrar</button>
+          </div></a>
+  
+          <div class="formulario__grupo  linea1">
+            <button type="submit" class="formulario__btn">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="tabla.html">verificar Tabla</a>
+                    </li>
+                  </ul>
+            </button>
+        </div>
+  
+        
+  
+      </div>
+  
+  
+     </div>
+  </form> -->
+
+  <form class="needs-validation" novalidate>
+
+    <div class="f">
+
+      <div class="botonesxd">
+  
+        <div class="formulario__grupo  linea1">
+          <button type="submit" class="formulario__btn2">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="inicio.html">volver a inicio</a>
+                  </li>
+                </ul>
+          </button>
+      </div>
+        
+  
+          <div class="formulario__grupo  linea1">
+            <button type="submit" class="formulario__btn2">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="tabla.html">verificar Tabla</a>
+                    </li>
+                  </ul>
+            </button>
+        </div>
+  
+        
+  
+      </div>
+  
+  
+     </div>
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/animacion.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+
+    <script>
+
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+    </script>
+</body>
+</html>
